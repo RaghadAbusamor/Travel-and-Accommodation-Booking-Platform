@@ -5,7 +5,13 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelAccommodationBooking.Web", "TravelAccommodationBooking.Web\TravelAccommodationBooking.Web.csproj", "{0BF5A7D6-F6BF-4CF5-A7EA-34911A0D4108}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAccommodationBooking.Model", "TravelAccommodationBooking.Model\TravelAccommodationBooking.Model.csproj", "{EAD4F725-C27B-45BB-98C5-2E54D62FFC0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelAccommodationBooking.Model", "TravelAccommodationBooking.Model\TravelAccommodationBooking.Model.csproj", "{EAD4F725-C27B-45BB-98C5-2E54D62FFC0A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelAccommodationBooking.BLL", "TravelAccommodationBooking.BLL\TravelAccommodationBooking.BLL.csproj", "{0797A758-30C8-4900-817F-33ED1DA9807D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAccommodationBooking.Config", "TravelAccommodationBooking.Config\TravelAccommodationBooking.Config.csproj", "{EDC3F604-FB94-44C8-A4DF-6F1EEDB097A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAccommodationBooking.Security", "TravelAccommodationBooking.Security\TravelAccommodationBooking.Security.csproj", "{271071A3-A7E7-4272-9FA5-CFECF8CAD8D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{EAD4F725-C27B-45BB-98C5-2E54D62FFC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAD4F725-C27B-45BB-98C5-2E54D62FFC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAD4F725-C27B-45BB-98C5-2E54D62FFC0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0797A758-30C8-4900-817F-33ED1DA9807D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0797A758-30C8-4900-817F-33ED1DA9807D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0797A758-30C8-4900-817F-33ED1DA9807D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0797A758-30C8-4900-817F-33ED1DA9807D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC3F604-FB94-44C8-A4DF-6F1EEDB097A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC3F604-FB94-44C8-A4DF-6F1EEDB097A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC3F604-FB94-44C8-A4DF-6F1EEDB097A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC3F604-FB94-44C8-A4DF-6F1EEDB097A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{271071A3-A7E7-4272-9FA5-CFECF8CAD8D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{271071A3-A7E7-4272-9FA5-CFECF8CAD8D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{271071A3-A7E7-4272-9FA5-CFECF8CAD8D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{271071A3-A7E7-4272-9FA5-CFECF8CAD8D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
