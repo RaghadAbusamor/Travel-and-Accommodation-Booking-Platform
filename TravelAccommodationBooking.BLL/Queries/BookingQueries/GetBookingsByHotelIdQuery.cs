@@ -1,5 +1,5 @@
-﻿using Application.DTOs.BookingDtos;
-using Domain.Common.Models;
+﻿using TravelAccommodationBooking.Model.Entities.Utilities;
+using TravelAccommodationBooking.BLL.DTO.Booking;
 using MediatR;
 
 namespace TravelAccommodationBooking.BLL.Queries.BookingQueries;
