@@ -1,5 +1,6 @@
-﻿using Domain.Common.Models;
-using MediatR;
+﻿using MediatR;
+using TravelAccommodationBooking.Model.Entities.Search;
+using TravelAccommodationBooking.Model.Entities.Utilities;
 
 namespace TravelAccommodationBooking.BLL.Queries.HotelQueries;
 

@@ -1,5 +1,5 @@
-﻿using Domain.Common.Interfaces;
-using MediatR;
+﻿using MediatR;
+using TravelAccommodationBooking.Model.Interfaces;
 using TravelAccommodationBooking.BLL.Queries.BookingQueries;
 
 namespace TravelAccommodationBooking.BLL.Handlers.BookingHandlers;

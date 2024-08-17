@@ -1,6 +1,6 @@
-﻿using Application.DTOs.BookingDtos;
-using AutoMapper;
-using Domain.Common.Models;
+﻿using AutoMapper;
+using TravelAccommodationBooking.BLL.DTO.Booking;
+using TravelAccommodationBooking.Model.Entities.Utilities;
 using MediatR;
 using TravelAccommodationBooking.BLL.Queries.BookingQueries;
 using TravelAccommodationBooking.Model.Interfaces;

@@ -1,9 +1,9 @@
-﻿using Application.Commands.BookingCommands;
-using Application.DTOs.BookingDtos;
-using AutoMapper;
-using Domain.Common.Models;
-using Domain.Entities;
+﻿using AutoMapper;
+using TravelAccommodationBooking.BLL.Commands.BookingCommands;
+using TravelAccommodationBooking.BLL.DTO.Booking;
 using TravelAccommodationBooking.BLL.Queries.BookingQueries;
+using TravelAccommodationBooking.Model.Entities.Billing;
+using TravelAccommodationBooking.Model.Entities.Hotel;
 
 namespace TravelAccommodationBooking.BLL.Profiles;
 

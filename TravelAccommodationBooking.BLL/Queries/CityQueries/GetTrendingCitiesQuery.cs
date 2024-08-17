@@ -1,5 +1,5 @@
-﻿using Application.DTOs.CityDtos;
-using MediatR;
+﻿using MediatR;
+using TravelAccommodationBooking.BLL.DTO.City;
 
 namespace TravelAccommodationBooking.BLL.Queries.CityQueries;
 

@@ -1,8 +1,8 @@
-﻿using Application.DTOs.CityDtos;
-using AutoMapper;
-using Domain.Common.Models;
+﻿using AutoMapper;
 using MediatR;
+using TravelAccommodationBooking.BLL.DTO.City;
 using TravelAccommodationBooking.BLL.Queries.CityQueries;
+using TravelAccommodationBooking.Model.Entities.Utilities;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.CityHandlers;
@@ -12,7 +12,7 @@ IRequestHandler<GetCitiesQuery, PaginatedList<CityDto>>
 {
     private readonly ICityRepository _cityRepository;
     private readonly IMapper _mapper;
-
+    
     public GetCitiesQueryHandler(ICityRepository cityRepository, IMapper mapper)
     {
         _cityRepository = cityRepository;

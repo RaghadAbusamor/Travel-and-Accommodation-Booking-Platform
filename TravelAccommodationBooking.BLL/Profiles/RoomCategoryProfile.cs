@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using Domain.Entities;
 using TravelAccommodationBooking.BLL.DTO.RoomType;
 using TravelAccommodationBooking.BLL.Queries.RoomCategoryQueries;
+using TravelAccommodationBooking.Model.Entities.Rooms;
 
 namespace TravelAccommodationBooking.BLL.Profiles;
 
@@ -12,7 +12,7 @@ public class RoomCategoryProfile : Profile
         CreateMap<RoomType, RoomTypeDto>()
             .ForMember
             (roomDto => roomDto.Amenities,
-                opt => opt.MapFrom(room => room.Amenities)
+                opt => opt.MapFrom(room => room.Features)
             );
         CreateMap<RoomTypeDto, RoomCategoryWithoutAmenitiesDto>();
 

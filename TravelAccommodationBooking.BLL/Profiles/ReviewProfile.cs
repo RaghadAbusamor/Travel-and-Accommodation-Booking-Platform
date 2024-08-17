@@ -1,8 +1,8 @@
-﻿using Application.Commands.ReviewCommands;
-using AutoMapper;
-using Domain.Entities;
+﻿using AutoMapper;
+using TravelAccommodationBooking.BLL.Commands.ReviewCommands;
 using TravelAccommodationBooking.BLL.DTO.Review;
 using TravelAccommodationBooking.BLL.Queries.ReviewQueries;
+using TravelAccommodationBooking.Model.Entities.Hotel;
 
 namespace TravelAccommodationBooking.BLL.Profiles;
 

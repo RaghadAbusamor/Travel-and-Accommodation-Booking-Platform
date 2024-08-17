@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TravelAccommodationBooking.Model.Entities.Room
+namespace TravelAccommodationBooking.Model.Entities.Rooms
 {
     public class RoomFeature
     {

@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using TravelAccommodationBooking.BLL.DTO.Room;
+using TravelAccommodationBooking.BLL.DTO.Rooms;
 
 namespace TravelAccommodationBooking.BLL.Queries.HotelQueries;
 

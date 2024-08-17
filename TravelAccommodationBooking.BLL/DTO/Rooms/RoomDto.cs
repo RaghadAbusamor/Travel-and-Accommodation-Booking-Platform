@@ -1,4 +1,4 @@
-﻿namespace TravelAccommodationBooking.BLL.DTO.Room;
+﻿namespace TravelAccommodationBooking.BLL.DTO.Rooms;
 
 public record RoomDto
 {

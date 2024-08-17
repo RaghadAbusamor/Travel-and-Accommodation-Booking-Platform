@@ -1,9 +1,9 @@
-﻿using Application.Commands.BookingCommands;
-using Application.DTOs.BookingDtos;
+﻿using TravelAccommodationBooking.Model.Entities.Hotel;
 using AutoMapper;
-using Domain.Entities;
 using MediatR;
 using TravelAccommodationBooking.Model.Interfaces;
+using TravelAccommodationBooking.BLL.DTO.Booking;
+using TravelAccommodationBooking.BLL.Commands.BookingCommands;
 
 namespace TravelAccommodationBooking.BLL.Handlers.BookingHandlers;
 

@@ -1,8 +1,9 @@
-﻿using Application.Commands.CityCommands;
-using Application.DTOs.CityDtos;
+﻿
 using AutoMapper;
-using Domain.Entities;
 using MediatR;
+using TravelAccommodationBooking.BLL.Commands.CityCommands;
+using TravelAccommodationBooking.BLL.DTO.City;
+using TravelAccommodationBooking.Model.Entities.Hotel;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.CityHandlers;

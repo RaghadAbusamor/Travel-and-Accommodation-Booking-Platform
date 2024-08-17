@@ -1,6 +1,6 @@
-﻿using Application.DTOs.CityDtos;
-using Domain.Common.Models;
-using MediatR;
+﻿using MediatR;
+using TravelAccommodationBooking.BLL.DTO.City;
+using TravelAccommodationBooking.Model.Entities.Utilities;
 
 namespace TravelAccommodationBooking.BLL.Queries.CityQueries;
 

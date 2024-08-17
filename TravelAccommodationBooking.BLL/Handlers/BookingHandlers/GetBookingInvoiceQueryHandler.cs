@@ -1,4 +1,4 @@
-﻿using Application.DTOs.BookingDtos;
+﻿using TravelAccommodationBooking.BLL.DTO.Booking;
 using AutoMapper;
 using MediatR;
 using TravelAccommodationBooking.BLL.Queries.BookingQueries;
