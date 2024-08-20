@@ -1,11 +1,10 @@
-﻿using Application.Commands.HotelCommands;
-using Application.Queries.CityQueries;
-using AutoMapper;
-using Domain.Common.Models;
-using Domain.Entities;
+﻿using AutoMapper;
+using TravelAccommodationBooking.BLL.Commands.HotelCommands;
 using TravelAccommodationBooking.BLL.DTO.Hotel;
-using TravelAccommodationBooking.BLL.DTO.Room;
+using TravelAccommodationBooking.BLL.DTO.Rooms;
 using TravelAccommodationBooking.BLL.Queries.HotelQueries;
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Entities.Search;
 
 namespace TravelAccommodationBooking.BLL.Profiles;
 
@@ -25,6 +24,6 @@ public class HotelProfile : Profile
         CreateMap<UpdateHotelCommand, Hotel>();
         CreateMap<GetHotelAvailableRoomsDto, GetHotelAvailableRoomsQuery>();
         CreateMap<HotelSearchQuery, HotelSearchParameters>();
-        CreateMap<FeaturedDeal, FeaturedDealDto>();
+        CreateMap<FeaturedDealDto, FeaturedDealDto>();
     }
 }

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
-using TravelAccommodationBooking.BLL.DTO.Room;
+using TravelAccommodationBooking.BLL.DTO.Rooms;
 using TravelAccommodationBooking.BLL.Queries.RoomQueries;
 using TravelAccommodationBooking.Model.Interfaces;
 

@@ -1,7 +1,7 @@
-﻿using Application.Commands.HotelCommands;
-using AutoMapper;
-using Domain.Exceptions;
+﻿using AutoMapper;
 using MediatR;
+using TravelAccommodationBooking.BLL.Commands.HotelCommands;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.HotelHandlers;

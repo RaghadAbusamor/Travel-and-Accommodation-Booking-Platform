@@ -1,11 +1,8 @@
-﻿using Application.Commands.UserCommands;
-using Application.DTOs.AppUserDtos;
-using AutoMapper;
-using Infrastructure.Auth.Models;
-using Infrastructure.Auth.Token;
+﻿using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using TAABP.API.Validators.AuthValidators;
+using TravelAccommodationBooking.Config.Auth.Models;
+using TravelAccommodationBooking.Config.Auth.Token;
 
 namespace TravelAccommodationBooking.Web.Controllers;
 

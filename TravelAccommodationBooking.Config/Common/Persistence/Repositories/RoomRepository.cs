@@ -1,9 +1,10 @@
-﻿using Domain.Common.Models;
-using Domain.Entities;
+﻿
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TravelAccommodationBooking.Config.Common.Persistence;
 using TravelAccommodationBooking.Config.Common.Utils;
+using TravelAccommodationBooking.Model.Entities.Rooms;
+using TravelAccommodationBooking.Model.Entities.Utilities;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.Config.Common.Persistence.Repositories;

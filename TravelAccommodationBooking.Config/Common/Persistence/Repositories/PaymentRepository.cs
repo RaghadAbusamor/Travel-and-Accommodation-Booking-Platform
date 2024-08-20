@@ -1,7 +1,7 @@
-﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TravelAccommodationBooking.Config.Common.Persistence;
+using TravelAccommodationBooking.Model.Entities.Hotel;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.Config.Common.Persistence.Repositories;

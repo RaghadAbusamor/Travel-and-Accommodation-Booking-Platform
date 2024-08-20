@@ -1,8 +1,8 @@
-﻿using Application.Commands.RoomAmenityCommands;
-using AutoMapper;
-using Domain.Entities;
-using Domain.Exceptions;
+﻿using AutoMapper;
 using MediatR;
+using TravelAccommodationBooking.BLL.Commands.RoomAmenityCommands;
+using TravelAccommodationBooking.Model.Entities.Rooms;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.RoomAmenityHandlers;
@@ -24,7 +24,7 @@ public class UpdateRoomAmenityCommandHandler : IRequestHandler<UpdateRoomAmenity
         {
             throw new NotFoundException($"Room Amenity with ID {request.Id} does not exist.");
         }
-        var roomAmenityToUpdate = _mapper.Map<RoomAmenity>(request);
+        var roomAmenityToUpdate = _mapper.Map<RoomFeature>(request);
         await _roomAmenityRepository.UpdateAsync(roomAmenityToUpdate);
     }
 }

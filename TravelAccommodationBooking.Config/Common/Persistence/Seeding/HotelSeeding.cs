@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+﻿using TravelAccommodationBooking.Model.Entities.Hotel;
 
 namespace TravelAccommodationBooking.Config.Common.Persistence.Seeding;
 
@@ -13,12 +13,12 @@ public class HotelSeeding
                 Id = new Guid("98c2c9fe-1a1c-4eaa-a7f5-b9d19b246c27"),
                 CityId = new Guid("f9e85d04-548c-4f98-afe9-2a8831c62a90"),
                 OwnerId = new Guid("a1d1aa11-12e7-4e0f-8425-67c1c1e62c2d"),
-                Name = "Luxury Inn",
+                Name = "Luxury HT",
                 Rating = 4.5f,
                 StreetAddress = "123 Main Street",
                 Description = "A luxurious hotel with top-notch amenities.",
-                PhoneNumber = "1234567890",
-                FloorsNumber = 10
+                PhoneNumber = "0123456789",
+                FloorsNumber = 15
             },
             new()
             {
@@ -30,7 +30,7 @@ public class HotelSeeding
                 StreetAddress = "456 Oak Avenue",
                 Description = "A cozy lodge nestled in the heart of nature.",
                 PhoneNumber = "2012345678",
-                FloorsNumber = 3
+                FloorsNumber = 5
             },
             new()
             {
@@ -42,7 +42,7 @@ public class HotelSeeding
                 StreetAddress = "789 Beachfront Road",
                 Description = "A resort with breathtaking sunset views over the ocean.",
                 PhoneNumber = "312345678",
-                FloorsNumber = 5
+                FloorsNumber = 10
             }
         };
     }

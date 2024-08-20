@@ -1,8 +1,9 @@
-﻿using Domain.Common.Models;
-using Domain.Entities;
+﻿
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TravelAccommodationBooking.Config.Common.Persistence;
+using TravelAccommodationBooking.Model.Entities.Rooms;
+using TravelAccommodationBooking.Model.Entities.Utilities;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.Config.Common.Persistence.Repositories;
@@ -36,7 +37,7 @@ public class RoomTypeRepository : IRoomTypeRepository
             {
                 query = query.
                     Include(roomCategory =>
-                    roomCategory.Amenities);
+                    roomCategory.Features);
             }
 
             var result = query

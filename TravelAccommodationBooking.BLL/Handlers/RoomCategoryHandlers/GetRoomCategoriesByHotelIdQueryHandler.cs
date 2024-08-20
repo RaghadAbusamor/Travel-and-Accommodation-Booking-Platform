@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Domain.Common.Models;
 using MediatR;
 using TravelAccommodationBooking.BLL.DTO.RoomType;
 using TravelAccommodationBooking.BLL.Queries.RoomCategoryQueries;
+using TravelAccommodationBooking.Model.Entities.Utilities;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.RoomCategoryHandlers;

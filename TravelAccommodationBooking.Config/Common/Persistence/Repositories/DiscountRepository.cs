@@ -1,8 +1,7 @@
-﻿using Domain.Common.Models;
-using Domain.Entities;
-using Domain.Exceptions;
-using Microsoft.EntityFrameworkCore;
-using TravelAccommodationBooking.Config.Common.Persistence;
+﻿using Microsoft.EntityFrameworkCore;
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Entities.Utilities;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Model.Interfaces;
 namespace TravelAccommodationBooking.Config.Common.Persistence.Repositories;
 
@@ -64,7 +63,7 @@ public class DiscountRepository : IDiscountRepository
     public async Task<Discount?> InsertAsync(Discount discount)
     {
         if (discount.FromDate.Date < DateTime.Today.Date)
-            throw new DiscountDateException("Discount start date cannot be in the past.");
+            throw new InvalidDiscountDateException("Discount start date cannot be in the past.");
 
         await _context.Discounts.AddAsync(discount);
         await SaveChangesAsync();

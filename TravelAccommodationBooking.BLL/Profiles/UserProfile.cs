@@ -1,7 +1,7 @@
-﻿using Application.Commands.UserCommands;
-using AutoMapper;
-using Domain.Entities;
+﻿using AutoMapper;
+using TravelAccommodationBooking.BLL.Commands.UserCommands;
 using TravelAccommodationBooking.BLL.DTO.User;
+using TravelAccommodationBooking.Model.Entities.User;
 
 namespace TravelAccommodationBooking.BLL.Profiles;
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TravelAccommodationBooking.Model.Entities.Hotel
 {
-    internal record FeaturedDeal
+    public record FeaturedDeal
     {
         public string CityName { get; set; }
         public Guid HotelId { get; set; }

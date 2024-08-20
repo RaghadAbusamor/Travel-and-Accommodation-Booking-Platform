@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using PasswordHashing;
+using TravelAccommodationBooking.Security;
 using TravelAccommodationBooking.Config.Auth.AuthUser;
 using TravelAccommodationBooking.Config.Auth.Models;
 

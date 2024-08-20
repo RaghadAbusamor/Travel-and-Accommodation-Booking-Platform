@@ -1,14 +1,14 @@
-﻿using Application.DTOs.ImageDtos;
-using Domain.Entities;
-using Domain.Enums;
-using Domain.Exceptions;
-using Firebase.Storage;
+﻿using Firebase.Storage;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Storage.V1;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using TravelAccommodationBooking.BLL.DTO.Image;
 using TravelAccommodationBooking.Config.Common.Persistence;
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Enums.Image;
+using TravelAccommodationBooking.Model.Exceptions;
 
 namespace TravelAccommodationBooking.Config.ImageStorage;
 
@@ -70,7 +70,7 @@ public class FireBaseImageService : IImageService
     {
         var thumbnail = await _context
             .Images
-            .SingleOrDefaultAsync(e => e.Type == ImageType.Thumbnail && e.EntityId.Equals(imageCreationDto.EntityId));
+            .SingleOrDefaultAsync(e => e.Type == ImageCategory.Thumbnail && e.EntityId.Equals(imageCreationDto.EntityId));
 
         if (thumbnail is not null)
         {

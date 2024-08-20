@@ -1,9 +1,9 @@
-﻿using Domain.Common.Models;
-using Domain.Entities;
-using Domain.Exceptions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TravelAccommodationBooking.Config.Common.Persistence;
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Entities.Utilities;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.Config.Common.Persistence.Repositories;
@@ -152,5 +152,20 @@ public class CityRepository : ICityRepository
             .Cities
             .AnyAsync
             (city => city.Id.Equals(cityId));
+    }
+
+    Task<PaginatedList<City>> ICityRepository.GetAllAsync(bool includeHotels, string? searchQuery, int pageNumber, int pageSize)
+    {
+        throw new NotImplementedException();
+    }
+
+    Task<City?> ICityRepository.GetByIdAsync(Guid cityId, bool includeHotels)
+    {
+        throw new NotImplementedException();
+    }
+
+    Task<List<City>> ICityRepository.GetTrendingCitiesAsync(int count)
+    {
+        throw new NotImplementedException();
     }
 }

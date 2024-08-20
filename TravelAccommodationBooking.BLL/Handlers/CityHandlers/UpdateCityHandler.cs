@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
-using Domain.Entities;
-using Domain.Exceptions;
 using MediatR;
 using TravelAccommodationBooking.BLL.Commands.BookingCommands;
+using TravelAccommodationBooking.BLL.Commands.CityCommands;
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.CityHandlers;

@@ -1,8 +1,8 @@
-﻿using Application.Commands.RoomCommands;
-using AutoMapper;
-using Domain.Entities;
-using TravelAccommodationBooking.BLL.DTO.Room;
+﻿using AutoMapper;
+using TravelAccommodationBooking.BLL.Commands.RoomCommands;
+using TravelAccommodationBooking.BLL.DTO.Rooms;
 using TravelAccommodationBooking.BLL.Queries.RoomQueries;
+using TravelAccommodationBooking.Model.Entities.Rooms;
 
 namespace TravelAccommodationBooking.BLL.Profiles;
 

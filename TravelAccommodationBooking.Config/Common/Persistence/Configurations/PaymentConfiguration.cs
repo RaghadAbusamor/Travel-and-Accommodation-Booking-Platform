@@ -1,8 +1,8 @@
-﻿using Domain.Entities;
-using Domain.Enums;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Enums.Payment;
 
 namespace TravelAccommodationBooking.Config.Common.Persistence.Configurations;
 

@@ -1,6 +1,7 @@
-﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Entities.Rooms;
 
 namespace TravelAccommodationBooking.Config.Common.Persistence.Configurations;
 

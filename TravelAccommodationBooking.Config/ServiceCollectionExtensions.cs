@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PasswordHashing;
 using TravelAccommodationBooking.Config.Auth.AuthUser;
 using TravelAccommodationBooking.Config.Auth.Token;
 using TravelAccommodationBooking.Config.Common.Persistence.Repositories;
@@ -8,6 +7,7 @@ using TravelAccommodationBooking.Config.Email.Models;
 using TravelAccommodationBooking.Config.ImageStorage;
 using TravelAccommodationBooking.Config.Pdf;
 using TravelAccommodationBooking.Model.Interfaces;
+using TravelAccommodationBooking.Security;
 
 namespace TravelAccommodationBooking.Config;
 

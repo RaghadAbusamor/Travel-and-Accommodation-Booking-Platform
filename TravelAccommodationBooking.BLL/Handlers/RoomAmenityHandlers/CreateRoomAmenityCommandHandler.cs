@@ -1,8 +1,8 @@
-﻿using Application.Commands.RoomAmenityCommands;
-using AutoMapper;
-using Domain.Entities;
+﻿using AutoMapper;
 using MediatR;
+using TravelAccommodationBooking.BLL.Commands.RoomAmenityCommands;
 using TravelAccommodationBooking.BLL.DTO.RoomFeature;
+using TravelAccommodationBooking.Model.Entities.Rooms;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.RoomAmenityHandlers;
@@ -20,7 +20,7 @@ public class CreateRoomAmenityCommandHandler : IRequestHandler<CreateRoomAmenity
 
     public async Task<RoomAmenityDto?> Handle(CreateRoomAmenityCommand request, CancellationToken cancellationToken)
     {
-        var amenityToAdd = _mapper.Map<RoomAmenity>(request);
+        var amenityToAdd = _mapper.Map<RoomFeature>(request);
         var addedAmenity = await _roomAmenityRepository.InsertAsync(amenityToAdd);
         return addedAmenity is null ? null : _mapper.Map<RoomAmenityDto>(addedAmenity);
     }

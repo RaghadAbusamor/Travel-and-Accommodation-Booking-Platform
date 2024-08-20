@@ -18,5 +18,6 @@ namespace TravelAccommodationBooking.Model.Entities.Hotel
         public string PhoneNumber { get; set; }
         public int FloorsNumber { get; set; }
 
+
     }
 }

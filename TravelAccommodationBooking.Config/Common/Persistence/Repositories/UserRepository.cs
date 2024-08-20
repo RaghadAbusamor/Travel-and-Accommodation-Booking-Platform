@@ -1,9 +1,11 @@
-﻿using Domain.Entities;
-using Domain.Exceptions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TravelAccommodationBooking.Config.Common.Persistence;
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Entities.User;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Model.Interfaces;
+
 
 namespace TravelAccommodationBooking.Config.Common.Persistence.Repositories;
 
@@ -39,7 +41,7 @@ public class UserRepository : IUserRepository
         {
             if (e.InnerException != null && e.InnerException.Message.Contains("Role"))
             {
-                throw new UserAlreadyExistsException("User already exists in the system.");
+                throw new UserAlreadyExistsException();
             }
             throw new DataConstraintViolationException("Error Adding User. Check for a violation of User attributes.");
         }

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Domain.Exceptions;
 using MediatR;
 using TravelAccommodationBooking.BLL.DTO.Hotel;
 using TravelAccommodationBooking.BLL.Queries.UserQueries;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.UserHandlers;

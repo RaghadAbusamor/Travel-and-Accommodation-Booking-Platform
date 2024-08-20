@@ -1,10 +1,10 @@
-﻿using Application.Commands.UserCommands;
-using AutoMapper;
-using Domain.Entities;
-using Domain.Enums;
+﻿using AutoMapper;
 using MediatR;
-using PasswordHashing;
+using TravelAccommodationBooking.BLL.Commands.UserCommands;
+using TravelAccommodationBooking.Model.Entities.User;
+using TravelAccommodationBooking.Model.Enums.User;
 using TravelAccommodationBooking.Model.Interfaces;
+using TravelAccommodationBooking.Security;
 
 namespace TravelAccommodationBooking.BLL.Handlers.UserHandlers;
 

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TravelAccommodationBooking.Config.Common.Persistence.Extensions;
 using TravelAccommodationBooking.Model.Entities.Billing;
-using TravelAccommodationBooking.Model.Entities.Room;
+using TravelAccommodationBooking.Model.Entities.Rooms;
 using TravelAccommodationBooking.Model.Entities.Hotel;
 using TravelAccommodationBooking.Model.Entities.Search;
 using TravelAccommodationBooking.Model.Entities.User;

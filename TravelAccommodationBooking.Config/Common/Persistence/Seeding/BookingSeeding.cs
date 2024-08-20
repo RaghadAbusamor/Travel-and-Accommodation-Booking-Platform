@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿
+using TravelAccommodationBooking.Model.Entities.Hotel;
 
 namespace TravelAccommodationBooking.Config.Common.Persistence.Seeding;
 

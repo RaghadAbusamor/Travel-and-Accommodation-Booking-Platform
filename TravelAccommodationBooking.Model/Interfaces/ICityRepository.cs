@@ -1,5 +1,5 @@
-﻿using Domain.Common.Models;
-using Domain.Entities;
+﻿using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Entities.Utilities;
 namespace TravelAccommodationBooking.Model.Interfaces;
 
 public interface ICityRepository

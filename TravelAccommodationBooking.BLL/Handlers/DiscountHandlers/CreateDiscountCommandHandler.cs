@@ -1,8 +1,8 @@
-﻿using Application.Commands.DiscountCommands;
-using AutoMapper;
-using Domain.Entities;
+﻿using AutoMapper;
 using MediatR;
+using TravelAccommodationBooking.BLL.Commands.DiscountCommands;
 using TravelAccommodationBooking.BLL.DTO.DIscount;
+using TravelAccommodationBooking.Model.Entities.Hotel;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.DiscountHandlers;

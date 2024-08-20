@@ -1,5 +1,5 @@
-﻿using Application.Commands.DiscountCommands;
-using MediatR;
+﻿using MediatR;
+using TravelAccommodationBooking.BLL.Commands.DiscountCommands;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.DiscountHandlers;

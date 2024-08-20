@@ -1,6 +1,6 @@
-﻿using Domain.Common.Models;
-using MediatR;
-using TravelAccommodationBooking.BLL.DTO.Room;
+﻿using MediatR;
+using TravelAccommodationBooking.BLL.DTO.Rooms;
+using TravelAccommodationBooking.Model.Entities.Utilities;
 
 namespace TravelAccommodationBooking.BLL.Queries.RoomQueries;
 

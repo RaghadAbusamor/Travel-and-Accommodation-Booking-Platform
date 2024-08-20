@@ -1,9 +1,8 @@
-﻿using Domain.Entities;
-using Domain.Enums;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Enums.Image;
 namespace TravelAccommodationBooking.Config.Common.Persistence.Configurations;
 
 public class ImageConfiguration : IEntityTypeConfiguration<Image>
@@ -26,6 +25,6 @@ public class ImageConfiguration : IEntityTypeConfiguration<Image>
         builder
             .Property(image => image.Type)
             .IsRequired()
-            .HasConversion(new EnumToStringConverter<ImageType>());
+            .HasConversion(new EnumToStringConverter<ImageCategory>());
     }
 }

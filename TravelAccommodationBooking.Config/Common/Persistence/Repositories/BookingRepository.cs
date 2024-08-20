@@ -1,9 +1,10 @@
-﻿using Domain.Common.Models;
-using Domain.Entities;
-using Domain.Exceptions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TravelAccommodationBooking.Config.Common.Persistence;
+using TravelAccommodationBooking.Model.Entities.Billing;
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Entities.Utilities;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.Config.Common.Persistence.Repositories;
@@ -138,7 +139,7 @@ public class BookingRepository : IBookingRepository
 
         if (bookingToRemove!.CheckInDate.Date <= DateTime.Today.Date)
         {
-            throw new BookingCheckInDatePassedException();
+            throw new PastCheckInDateException();
         }
 
         _context.Bookings.Remove(bookingToRemove);

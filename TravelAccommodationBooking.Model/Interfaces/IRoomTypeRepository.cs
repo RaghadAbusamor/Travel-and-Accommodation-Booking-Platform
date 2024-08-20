@@ -1,5 +1,6 @@
-﻿using Domain.Common.Models;
-using Domain.Entities;
+﻿
+using TravelAccommodationBooking.Model.Entities.Rooms;
+using TravelAccommodationBooking.Model.Entities.Utilities;
 
 namespace TravelAccommodationBooking.Model.Interfaces;
 

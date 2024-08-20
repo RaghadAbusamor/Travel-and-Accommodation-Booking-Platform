@@ -1,9 +1,9 @@
-﻿using Application.Commands.RoomCommands;
-using AutoMapper;
-using Domain.Entities;
-using Domain.Exceptions;
+﻿using AutoMapper;
 using MediatR;
-using TravelAccommodationBooking.BLL.DTO.Room;
+using TravelAccommodationBooking.BLL.Commands.RoomCommands;
+using TravelAccommodationBooking.BLL.DTO.Rooms;
+using TravelAccommodationBooking.Model.Entities.Rooms;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.RoomHandlers;

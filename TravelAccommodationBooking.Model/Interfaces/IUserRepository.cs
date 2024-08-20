@@ -1,4 +1,6 @@
-﻿using Domain.Entities;
+﻿
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Entities.User;
 
 namespace TravelAccommodationBooking.Model.Interfaces;
 

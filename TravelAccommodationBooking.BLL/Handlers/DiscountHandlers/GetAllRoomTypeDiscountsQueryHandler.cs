@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
-using Domain.Common.Models;
-using Domain.Exceptions;
 using MediatR;
 using TravelAccommodationBooking.BLL.DTO.DIscount;
 using TravelAccommodationBooking.BLL.Queries.DiscountQueries;
+using TravelAccommodationBooking.Model.Entities.Utilities;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.DiscountHandlers;

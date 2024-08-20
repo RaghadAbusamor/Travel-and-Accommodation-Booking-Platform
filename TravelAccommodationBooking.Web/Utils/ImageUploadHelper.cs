@@ -1,11 +1,13 @@
-﻿using Application.DTOs.ImageDtos;
-using Domain.Enums;
+﻿
+using TravelAccommodationBooking.BLL.DTO.Image;
+using TravelAccommodationBooking.Model.Entities.Hotel;
+using TravelAccommodationBooking.Model.Enums.Image;
 
 namespace TravelAccommodationBooking.Web.Utils;
 
 public static class ImageUploadHelper
 {
-    public static async Task<ImageCreationDto> CreateImageCreationDto(Guid entityId, IFormFile file, ImageType type)
+    public static async Task<ImageCreationDto> CreateImageCreationDto(Guid entityId, IFormFile file, ImageCategory type)
     {
         using var memoryStream = new MemoryStream();
         await file.CopyToAsync(memoryStream);

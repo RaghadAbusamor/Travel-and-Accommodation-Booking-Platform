@@ -1,6 +1,5 @@
-﻿using Application.Commands.RoomAmenityCommands;
-using AutoMapper;
-using Domain.Entities;
+﻿using AutoMapper;
+using TravelAccommodationBooking.BLL.Commands.RoomAmenityCommands;
 using TravelAccommodationBooking.BLL.DTO.RoomFeature;
 
 namespace TravelAccommodationBooking.BLL.Profiles;

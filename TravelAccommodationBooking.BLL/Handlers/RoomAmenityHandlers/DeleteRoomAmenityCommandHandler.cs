@@ -1,7 +1,7 @@
-﻿using Application.Commands.RoomAmenityCommands;
-using AutoMapper;
-using Domain.Exceptions;
+﻿using AutoMapper;
 using MediatR;
+using TravelAccommodationBooking.BLL.Commands.RoomAmenityCommands;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.RoomAmenityHandlers;

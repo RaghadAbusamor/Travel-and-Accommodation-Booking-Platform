@@ -1,4 +1,4 @@
-﻿using Application.DTOs.ImageDtos;
+﻿using TravelAccommodationBooking.BLL.DTO.Image;
 
 namespace TravelAccommodationBooking.Config.ImageStorage;
 

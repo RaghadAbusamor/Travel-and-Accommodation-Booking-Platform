@@ -1,9 +1,9 @@
-﻿using Domain.Common.Models;
-using Domain.Entities;
-using Domain.Exceptions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TravelAccommodationBooking.Config.Common.Persistence;
+using TravelAccommodationBooking.Model.Entities.Rooms;
+using TravelAccommodationBooking.Model.Entities.Utilities;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.Config.Common.Persistence.Repositories;
@@ -19,11 +19,11 @@ public class RoomAmenityRepository : IRoomAmenityRepository
         _logger = logger;
     }
 
-    public async Task<PaginatedList<RoomAmenity>> GetAllAsync(string? searchQuery, int pageNumber, int pageSize)
+    public async Task<PaginatedList<RoomFeature>> GetAllAsync(string? searchQuery, int pageNumber, int pageSize)
     {
         try
         {
-            var query = _context.RoomAmenities.AsQueryable();
+            var query = _context.RoomFeatures.AsQueryable();
             var totalItemCount = await query.CountAsync();
             var pageData = new PageData(totalItemCount, pageSize, pageNumber);
 
@@ -41,20 +41,20 @@ public class RoomAmenityRepository : IRoomAmenityRepository
                 .AsNoTracking()
                 .ToList();
 
-            return new PaginatedList<RoomAmenity>(result, pageData);
+            return new PaginatedList<RoomFeature>(result, pageData);
         }
         catch (Exception)
         {
-            return new PaginatedList<RoomAmenity>(new List<RoomAmenity>(), new PageData(0, 0, 0));
+            return new PaginatedList<RoomFeature>(new List<RoomFeature>(), new PageData(0, 0, 0));
         }
     }
 
-    public async Task<RoomAmenity?> GetByIdAsync(Guid amenityId)
+    public async Task<RoomFeature?> GetByIdAsync(Guid amenityId)
     {
         try
         {
             var query = _context
-                .RoomAmenities
+                .RoomFeatures
                 .AsQueryable();
 
             return await query
@@ -69,11 +69,11 @@ public class RoomAmenityRepository : IRoomAmenityRepository
         return null;
     }
 
-    public async Task<RoomAmenity?> InsertAsync(RoomAmenity roomAmenity)
+    public async Task<RoomFeature?> InsertAsync(RoomFeature roomAmenity)
     {
         try
         {
-            await _context.RoomAmenities.AddAsync(roomAmenity);
+            await _context.RoomFeatures.AddAsync(roomAmenity);
             await SaveChangesAsync();
             return roomAmenity;
         }
@@ -84,11 +84,11 @@ public class RoomAmenityRepository : IRoomAmenityRepository
         }
     }
 
-    public async Task UpdateAsync(RoomAmenity roomAmenity)
+    public async Task UpdateAsync(RoomFeature roomAmenity)
     {
         try
         {
-            _context.RoomAmenities.Update(roomAmenity);
+            _context.RoomFeatures.Update(roomAmenity);
             await SaveChangesAsync();
         }
         catch (DbUpdateException)
@@ -104,8 +104,8 @@ public class RoomAmenityRepository : IRoomAmenityRepository
 
     public async Task DeleteAsync(Guid amenityId)
     {
-        var amenityToRemove = new RoomAmenity { Id = amenityId };
-        _context.RoomAmenities.Remove(amenityToRemove);
+        var amenityToRemove = new RoomFeature { Id = amenityId };
+        _context.RoomFeatures.Remove(amenityToRemove);
         await SaveChangesAsync();
     }
 
@@ -117,7 +117,7 @@ public class RoomAmenityRepository : IRoomAmenityRepository
     public async Task<bool> IsExistsAsync(Guid amenityId)
     {
         return await _context
-            .RoomAmenities
+            .RoomFeatures
             .AnyAsync
             (roomAmenity => roomAmenity.Id.Equals(amenityId));
     }
