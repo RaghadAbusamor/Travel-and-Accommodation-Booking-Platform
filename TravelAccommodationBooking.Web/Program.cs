@@ -1,18 +1,19 @@
 using System.Reflection;
 using System.Text;
-using TravelAccommodationBooking;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using TravelAccommodationBooking.BLL;
+using TravelAccommodationBooking.Config;
 using TravelAccommodationBooking.Config.Common.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("TAABPCoreDb")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
 services.AddControllers(options =>
@@ -49,8 +50,8 @@ services.AddSwaggerGen(setupAction =>
 });
 
 services
-    .AddApplication()
-    .AddInfrastructure();
+    .AddBLL()
+    .AddConfig();
 
 services.AddAuthentication("Bearer").AddJwtBearer(
     options =>

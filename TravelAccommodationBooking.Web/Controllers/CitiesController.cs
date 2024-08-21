@@ -4,8 +4,14 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-using TAABP.API.Validators.CityValidators;
+using TravelAccommodationBooking.BLL.Commands.CityCommands;
+using TravelAccommodationBooking.BLL.DTO.City;
+using TravelAccommodationBooking.BLL.Queries.CityQueries;
+using TravelAccommodationBooking.Config.ImageStorage;
+using TravelAccommodationBooking.Model.Enums.Image;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Web.Utils;
+using TravelAccommodationBooking.Web.Validators.CityValidators;
 
 namespace TravelAccommodationBooking.Web.Controllers;
 
@@ -272,7 +278,7 @@ public class CitiesController : Controller
                 return NotFound($"City with ID {cityId} does not exist");
 
             var imageCreationDto = await ImageUploadHelper
-            .CreateImageCreationDto(cityId, file, ImageType.Gallery);
+            .CreateImageCreationDto(cityId, file, ImageCategory.Gallery);
             await _imageService.UploadImageAsync(imageCreationDto);
             return Ok("Image uploaded successfully.");
         }
@@ -309,7 +315,7 @@ public class CitiesController : Controller
                 return NotFound($"City with ID {cityId} does not exist");
 
             var imageCreationDto = await ImageUploadHelper
-            .CreateImageCreationDto(cityId, file, ImageType.Thumbnail);
+            .CreateImageCreationDto(cityId, file, ImageCategory.Thumbnail);
             await _imageService.UploadThumbnailAsync(imageCreationDto);
             return Ok("Thumbnail uploaded successfully.");
         }

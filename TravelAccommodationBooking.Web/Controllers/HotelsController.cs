@@ -1,25 +1,25 @@
 ﻿using System.Text.Json;
-using Application.Commands.HotelCommands;
-using Application.Commands.RoomCommands;
-using Application.DTOs.BookingDtos;
-using Application.DTOs.HotelDtos;
-using Application.DTOs.RoomCategoriesDtos;
-using Application.DTOs.RoomDtos;
-using Application.Queries.BookingQueries;
-using Application.Queries.HotelQueries;
-using Application.Queries.RoomCategoryQueries;
-using Application.Queries.RoomQueries;
 using AutoMapper;
-using Domain.Enums;
-using Domain.Exceptions;
-using Infrastructure.ImageStorage;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TAABP.API.Validators.BookingValidators;
-using TAABP.API.Validators.HotelValidators;
-using TAABP.API.Validators.RoomValidators;
+using TravelAccommodationBooking.BLL.Commands.HotelCommands;
+using TravelAccommodationBooking.BLL.Commands.RoomCommands;
+using TravelAccommodationBooking.BLL.DTO.Booking;
+using TravelAccommodationBooking.BLL.DTO.Hotel;
+using TravelAccommodationBooking.BLL.DTO.Rooms;
+using TravelAccommodationBooking.BLL.DTO.RoomType;
+using TravelAccommodationBooking.BLL.Queries.BookingQueries;
+using TravelAccommodationBooking.BLL.Queries.HotelQueries;
+using TravelAccommodationBooking.BLL.Queries.RoomCategoryQueries;
+using TravelAccommodationBooking.BLL.Queries.RoomQueries;
+using TravelAccommodationBooking.Config.ImageStorage;
+using TravelAccommodationBooking.Model.Enums.Image;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Web.Utils;
+using TravelAccommodationBooking.Web.Validators.BookingValidators;
+using TravelAccommodationBooking.Web.Validators.HotelValidators;
+using TravelAccommodationBooking.Web.Validators.RoomValidators;
 
 namespace TravelAccommodationBooking.Web.Controllers;
 
@@ -286,7 +286,7 @@ public class HotelsController : Controller
                 return NotFound($"Hotel with ID {hotelId} does not exist");
 
             var imageCreationDto = await ImageUploadHelper
-            .CreateImageCreationDto(hotelId, file, ImageType.Gallery);
+            .CreateImageCreationDto(hotelId, file, ImageCategory.Gallery);
             await _imageService.UploadImageAsync(imageCreationDto);
             return Ok("Image uploaded successfully.");
         }
@@ -323,7 +323,7 @@ public class HotelsController : Controller
                 return NotFound($"Hotel with ID {hotelId} does not exist");
 
             var imageCreationDto = await ImageUploadHelper
-            .CreateImageCreationDto(hotelId, file, ImageType.Thumbnail);
+            .CreateImageCreationDto(hotelId, file, ImageCategory.Thumbnail);
             await _imageService.UploadThumbnailAsync(imageCreationDto);
             return Ok("Image uploaded successfully.");
         }

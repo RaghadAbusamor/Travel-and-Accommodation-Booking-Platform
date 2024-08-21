@@ -1,14 +1,14 @@
 ﻿using System.Text.Json;
-using Application.Commands.DiscountCommands;
-using Application.DTOs.DiscountDtos;
-using Application.Queries.DiscountQueries;
-using Application.Queries.RoomCategoryQueries;
 using AutoMapper;
-using Domain.Exceptions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TAABP.API.Validators.DiscountValidators;
+using TravelAccommodationBooking.BLL.Commands.DiscountCommands;
+using TravelAccommodationBooking.BLL.DTO.DIscount;
+using TravelAccommodationBooking.BLL.Queries.DiscountQueries;
+using TravelAccommodationBooking.BLL.Queries.RoomCategoryQueries;
+using TravelAccommodationBooking.Model.Exceptions;
+using TravelAccommodationBooking.Web.Validators.DiscountValidators;
 
 namespace TravelAccommodationBooking.Web.Controllers;
 
@@ -134,7 +134,7 @@ public class RoomTypesController : Controller
             return CreatedAtRoute("GetDiscount",
             new { discountId = discountToReturn.Id }, discountToReturn);
         }
-        catch (DiscountDateException e)
+        catch (InvalidDiscountDateException e)
         {
             return BadRequest($"Discount start date is invalid: {e.Message}");
         }

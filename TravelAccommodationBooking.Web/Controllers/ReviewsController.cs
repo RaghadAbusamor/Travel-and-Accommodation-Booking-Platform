@@ -1,14 +1,14 @@
 ﻿using System.Security.Claims;
 using System.Text.Json;
-using Application.Commands.ReviewCommands;
-using Application.DTOs.ReviewsDtos;
-using Application.Queries.BookingQueries;
-using Application.Queries.ReviewQueries;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TAABP.API.Validators.ReviewValidators;
+using TravelAccommodationBooking.BLL.Commands.ReviewCommands;
+using TravelAccommodationBooking.BLL.DTO.Review;
+using TravelAccommodationBooking.BLL.Queries.BookingQueries;
+using TravelAccommodationBooking.BLL.Queries.ReviewQueries;
+using TravelAccommodationBooking.Web.Validators.ReviewValidators;
 
 namespace TravelAccommodationBooking.Web.Controllers;
 

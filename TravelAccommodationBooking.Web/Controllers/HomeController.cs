@@ -1,10 +1,10 @@
 ﻿using System.Text.Json;
-using Application.Queries.CityQueries;
-using Application.Queries.HotelQueries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TAABP.API.Validators.HomeValidators;
+using TravelAccommodationBooking.BLL.Queries.CityQueries;
+using TravelAccommodationBooking.BLL.Queries.HotelQueries;
+using TravelAccommodationBooking.Web.Validators.HomeValidators;
 
 namespace TravelAccommodationBooking.Web.Controllers;
 

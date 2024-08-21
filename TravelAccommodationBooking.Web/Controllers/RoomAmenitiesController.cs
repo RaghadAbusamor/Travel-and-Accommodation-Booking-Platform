@@ -1,14 +1,14 @@
 ﻿using System.Text.Json;
-using Application.Commands.RoomAmenityCommands;
-using Application.DTOs.RoomAmenityDtos;
-using Application.Queries.RoomAmenityQueries;
 using AutoMapper;
-using Domain.Exceptions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-using TAABP.API.Validators.RoomAmenityValidators;
+using TravelAccommodationBooking.BLL.Commands.RoomAmenityCommands;
+using TravelAccommodationBooking.BLL.DTO.RoomFeature;
+using TravelAccommodationBooking.BLL.Queries.RoomAmenityQueries;
+using TravelAccommodationBooking.Model.Exceptions;
+using TravelAccommodationBooking.Web.Validators.RoomAmenityValidators;
 
 namespace TravelAccommodationBooking.Web.Controllers;
 

@@ -1,19 +1,18 @@
 ﻿using System.Security.Claims;
-using Application.Commands.BookingCommands;
-using Application.DTOs.BookingDtos;
-using Application.Queries.BookingQueries;
-using Application.Queries.RoomQueries;
-using Application.Queries.UserQueries;
 using AutoMapper;
-using Domain.Exceptions;
-using Infrastructure.Email;
-using Infrastructure.Email.Models;
-using Infrastructure.Pdf;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TAABP.API.Validators.BookingValidators;
+using TravelAccommodationBooking.BLL.Commands.BookingCommands;
+using TravelAccommodationBooking.BLL.DTO.Booking;
+using TravelAccommodationBooking.BLL.Queries.BookingQueries;
+using TravelAccommodationBooking.BLL.Queries.RoomQueries;
+using TravelAccommodationBooking.BLL.Queries.UserQueries;
+using TravelAccommodationBooking.Config.Email.Models;
+using TravelAccommodationBooking.Config.Pdf;
+using TravelAccommodationBooking.Model.Exceptions;
 using TravelAccommodationBooking.Web.Utils;
+using TravelAccommodationBooking.Web.Validators.BookingValidators;
 
 namespace TravelAccommodationBooking.Web.Controllers;
 
@@ -129,7 +128,7 @@ public class GuestsController : Controller
             await _mediator.Send(deleteBookingCommand);
             return NoContent();
         }
-        catch (BookingCheckInDatePassedException e)
+        catch (PastCheckInDateException e)
         {
             return BadRequest(e.Message);
         }

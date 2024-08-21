@@ -13,7 +13,7 @@ namespace TravelAccommodationBooking.Config;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services)
+    public static IServiceCollection AddConfig(this IServiceCollection services)
     {
         services.AddScoped<ICityRepository, CityRepository>();
         services.AddScoped<IUserRepository, UserRepository>();

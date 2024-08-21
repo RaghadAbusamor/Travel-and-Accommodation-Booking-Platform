@@ -1,6 +1,6 @@
 ﻿using System.Text;
-using Application.DTOs.BookingDtos;
-using Infrastructure.Email;
+using TravelAccommodationBooking.BLL.DTO.Booking;
+using TravelAccommodationBooking.Config.Email;
 
 namespace TravelAccommodationBooking.Web.Utils;
 
