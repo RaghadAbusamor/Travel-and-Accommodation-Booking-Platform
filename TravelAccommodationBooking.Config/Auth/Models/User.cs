@@ -1,4 +1,5 @@
-﻿using Domain.Enums;
+﻿
+using TravelAccommodationBooking.Model.Enums.User;
 
 namespace TravelAccommodationBooking.Config.Auth.Models;
 

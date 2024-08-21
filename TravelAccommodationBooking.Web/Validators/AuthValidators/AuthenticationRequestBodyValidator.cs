@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using Infrastructure.Auth.Models;
+using TravelAccommodationBooking.Config.Auth.Models;
 using TravelAccommodationBooking.Web.Validators;
 
 namespace TravelAccommodationBooking.Web.Validators.AuthValidators;

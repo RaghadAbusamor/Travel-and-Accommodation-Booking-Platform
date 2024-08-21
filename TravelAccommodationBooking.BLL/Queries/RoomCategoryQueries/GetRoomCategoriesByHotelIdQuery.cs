@@ -1,5 +1,4 @@
-﻿using Domain.Common.Models;
-using MediatR;
+﻿using MediatR;
 using TravelAccommodationBooking.BLL.DTO.RoomType;
 using TravelAccommodationBooking.Model.Entities.Utilities;
 

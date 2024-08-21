@@ -2,44 +2,45 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TravelAccommodationBooking.Model.Entities.Hotel;
 
-namespace TravelAccommodationBooking.Config.Common.Persistence.Configurations;
-
-public class HotelConfiguration : IEntityTypeConfiguration<Hotel>
+namespace TravelAccommodationBooking.Config.Common.Persistence.Configurations
 {
-    public void Configure(EntityTypeBuilder<Hotel> builder)
+    public class HotelConfiguration : IEntityTypeConfiguration<Hotel>
     {
-        builder
-            .Property(hotel => hotel.Name)
-            .IsRequired()
-            .HasMaxLength(50);
+        public void Configure(EntityTypeBuilder<Hotel> builder)
+        {
+            builder
+                .Property(hotel => hotel.Name)
+                .IsRequired()
+                .HasMaxLength(50);
 
-        builder
-            .Property(hotel => hotel.Rating)
-            .IsRequired()
-            .HasDefaultValue(0.0F);
+            builder
+                .Property(hotel => hotel.Rating)
+                .IsRequired()
+                .HasDefaultValue(0.0F);
 
-        builder
-            .Property(hotel => hotel.StreetAddress)
-            .IsRequired()
-            .HasMaxLength(50);
+            builder
+                .Property(hotel => hotel.StreetAddress)
+                .IsRequired()
+                .HasMaxLength(50);
 
-        builder
-            .Property(hotel => hotel.Description)
-            .IsRequired()
-            .HasMaxLength(100);
+            builder
+                .Property(hotel => hotel.Description)
+                .IsRequired()
+                .HasMaxLength(100);
 
-        builder
-            .Property(hotel => hotel.PhoneNumber)
-            .IsRequired()
-            .HasMaxLength(20);
+            builder
+                .Property(hotel => hotel.PhoneNumber)
+                .IsRequired()
+                .HasMaxLength(20);
 
-        builder
-            .Property(hotel => hotel.FloorsNumber)
-            .IsRequired();
+            builder
+                .Property(hotel => hotel.FloorsNumber)
+                .IsRequired();
 
-        builder.ToTable(hotel =>
-            hotel
-            .HasCheckConstraint
-            ("CK_Hotel_RatingRange", "[Rating] >= 0 AND [Rating] <= 5"));
+            builder.ToTable(t =>
+            {
+                t.HasCheckConstraint("CK_Hotel_RatingRange", "[Rating] >= 0 AND [Rating] <= 5");
+            });
+        }
     }
 }

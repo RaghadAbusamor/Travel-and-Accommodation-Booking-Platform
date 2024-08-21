@@ -1,11 +1,5 @@
 ﻿using System.Text.Json;
-using Application.Commands.CityCommands;
-using Application.DTOs.CityDtos;
-using Application.Queries.CityQueries;
 using AutoMapper;
-using Domain.Enums;
-using Domain.Exceptions;
-using Infrastructure.ImageStorage;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;

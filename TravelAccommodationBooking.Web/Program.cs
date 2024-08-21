@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using TravelAccommodationBooking.Config.Common.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;

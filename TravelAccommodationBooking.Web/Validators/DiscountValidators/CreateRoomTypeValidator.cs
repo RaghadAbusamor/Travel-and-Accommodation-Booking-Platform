@@ -1,5 +1,5 @@
-﻿using Application.Commands.DiscountCommands;
-using FluentValidation;
+﻿using FluentValidation;
+using TravelAccommodationBooking.BLL.Commands.DiscountCommands;
 
 namespace TravelAccommodationBooking.Web.Validators.DiscountValidators;
 

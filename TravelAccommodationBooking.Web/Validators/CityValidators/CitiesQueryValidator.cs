@@ -1,5 +1,5 @@
-﻿using Application.Queries.CityQueries;
-using FluentValidation;
+﻿using FluentValidation;
+using TravelAccommodationBooking.BLL.Queries.CityQueries;
 
 namespace TravelAccommodationBooking.Web.Validators.CityValidators;
 

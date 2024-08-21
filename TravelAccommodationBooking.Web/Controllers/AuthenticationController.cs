@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using TravelAccommodationBooking.BLL.Commands.UserCommands;
+using TravelAccommodationBooking.BLL.DTO.User;
 using TravelAccommodationBooking.Config.Auth.Models;
 using TravelAccommodationBooking.Config.Auth.Token;
+using TravelAccommodationBooking.Web.Validators.AuthValidators;
 
 namespace TravelAccommodationBooking.Web.Controllers;
 

@@ -1,6 +1,5 @@
-﻿using Application.DTOs.BookingDtos;
-using FluentValidation;
-using TravelAccommodationBooking.Web.Validators;
+﻿using FluentValidation;
+using TravelAccommodationBooking.BLL.DTO.Booking;
 
 namespace TravelAccommodationBooking.Web.Validators.BookingValidators;
 

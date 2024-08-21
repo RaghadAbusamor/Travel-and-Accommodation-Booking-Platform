@@ -1,8 +1,8 @@
-﻿using Application.Commands.ReviewCommands;
-using AutoMapper;
-using Domain.Entities;
+﻿using AutoMapper;
 using MediatR;
+using TravelAccommodationBooking.BLL.Commands.ReviewCommands;
 using TravelAccommodationBooking.BLL.DTO.Review;
+using TravelAccommodationBooking.Model.Entities.Hotel;
 using TravelAccommodationBooking.Model.Interfaces;
 
 namespace TravelAccommodationBooking.BLL.Handlers.ReviewHandlers;

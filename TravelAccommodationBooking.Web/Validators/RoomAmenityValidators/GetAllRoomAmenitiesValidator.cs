@@ -1,5 +1,5 @@
-﻿using Application.Queries.RoomAmenityQueries;
-using FluentValidation;
+﻿using FluentValidation;
+using TravelAccommodationBooking.BLL.Queries.RoomAmenityQueries;
 using TravelAccommodationBooking.Web.Validators;
 
 namespace TravelAccommodationBooking.Web.Validators.RoomAmenityValidators;

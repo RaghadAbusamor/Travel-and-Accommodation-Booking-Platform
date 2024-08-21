@@ -1,6 +1,5 @@
-﻿using Application.Queries.BookingQueries;
-using FluentValidation;
-using TravelAccommodationBooking.Web.Validators;
+﻿using FluentValidation;
+using TravelAccommodationBooking.BLL.Queries.BookingQueries;
 
 namespace TravelAccommodationBooking.Web.Validators.BookingValidators;
 
