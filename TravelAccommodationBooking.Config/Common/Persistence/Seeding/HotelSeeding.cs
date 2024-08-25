@@ -12,7 +12,7 @@ public class HotelSeeding
             {
                 Id = new Guid("98c2c9fe-1a1c-4eaa-a7f5-b9d19b246c27"),
                 CityId = new Guid("f9e85d04-548c-4f98-afe9-2a8831c62a90"),
-                OwnerId = new Guid("a1d1aa11-12e7-4e0f-8425-67c1c1e62c2d"),
+                OwnerId = new Guid("55b1aa11-12e7-4e0f-8425-67c1c1e62c2d"),
                 Name = "Luxury HT",
                 Rating = 4.5f,
                 StreetAddress = "123 Main Street",
@@ -24,7 +24,7 @@ public class HotelSeeding
             {
                 Id = new Guid("bfa4173d-7893-48b9-a497-5f4c7fb2492b"),
                 CityId = new Guid("8d2aeb7a-7c67-4911-aa2c-d6a3b4dc7e9e"),
-                OwnerId = new Guid("a1d1aa11-12e7-4e0f-8425-67c1c1e62c2d"),
+                OwnerId = new Guid("55b1aa11-12e7-4e0f-8425-67c1c1e62c2d"),
                 Name = "Cozy Lodge",
                 Rating = 3.8f,
                 StreetAddress = "456 Oak Avenue",

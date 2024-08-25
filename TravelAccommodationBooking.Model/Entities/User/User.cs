@@ -14,6 +14,5 @@ namespace TravelAccommodationBooking.Model.Entities.User
         public string Salt { get; set; }
         public UserRole Role { get; set; }
         public IList<Booking> Bookings { get; set; }
-
     }
 }

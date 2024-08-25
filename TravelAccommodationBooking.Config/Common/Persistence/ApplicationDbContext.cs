@@ -6,6 +6,7 @@ using TravelAccommodationBooking.Model.Entities.Hotel;
 using TravelAccommodationBooking.Model.Entities.Search;
 using TravelAccommodationBooking.Model.Entities.User;
 using TravelAccommodationBooking.Config.Common.Persistence.Configurations;
+using TravelAccommodationBooking.Security;
 
 
 
@@ -13,6 +14,7 @@ namespace TravelAccommodationBooking.Config.Common.Persistence;
 
 public class ApplicationDbContext : DbContext
 {
+
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
 

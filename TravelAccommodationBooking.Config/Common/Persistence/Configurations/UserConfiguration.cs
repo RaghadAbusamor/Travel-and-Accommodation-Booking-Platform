@@ -39,7 +39,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .IsRequired();
 
         builder
-            .Property(image => image.Role)
+            .Property(user => user.Role)
             .IsRequired()
             .HasConversion(new EnumToStringConverter<UserRole>());
     }

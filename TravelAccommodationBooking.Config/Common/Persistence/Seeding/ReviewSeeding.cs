@@ -29,7 +29,7 @@ public class ReviewSeeding
                 Id = new Guid("192045db-c6db-49c9-aa6b-2e3d6c7f3b79"),
                 BookingId = new Guid("7d3155a2-95f8-4d9b-bc24-662ae053f1c9"),
                 Comment = "Clean rooms and beautiful views.",
-                ReviewDate = DateTime.Parse("20243-06-20"),
+                ReviewDate = DateTime.Parse("2024-06-20"),
                 Rating = 4.2f
             }
         };
